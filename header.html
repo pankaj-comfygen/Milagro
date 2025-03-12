@@ -1,0 +1,38 @@
+<header class="bg-[#212A1E] text-white w-full h-[60px] flex items-center justify-between px-7">
+    <div class="flex items-center gap-4">
+        <span class="text-xl cursor-pointer">
+            <i class="fa-solid fa-bag-shopping text-[#AA8B7A]"></i>
+        </span>
+        <span class="text-xl cursor-pointer">
+            <i class="fa-regular fa-user text-[#AA8B7A]"></i>
+        </span>
+    </div>
+
+    <div class="text-2xl font-bold">
+        <img src="image\Logo.png" />
+    </div>
+
+    <div class="flex items-center gap-4">
+        <span class="text-xl cursor-pointer">
+            <i class="fa-solid fa-magnifying-glass text-[#AA8B7A]"></i>
+        </span>
+        <button id="openSidebar" class="text-xl cursor-pointer">
+            <i class="fa-solid fa-bars text-[#AA8B7A]"></i>
+        </button>
+    </div>
+</header>
+
+
+<div id="sidebar"
+    class="fixed top-0 right-0 w-64 h-full bg-[#1A1F1C] text-white transform translate-x-full transition-transform duration-300 ease-in-out">
+    <div class="flex justify-between items-center p-4 border-b border-gray-600">
+        <h2 class="text-lg font-semibold">Sidebar Menu</h2>
+        <button id="closeSidebar" class="text-xl cursor-pointer">✖️</button>
+    </div>
+    <nav class="p-4 space-y-4">
+        <a href="#" class="block hover:underline">Home</a>
+        <a href="#" class="block hover:underline">Shop</a>
+        <a href="#" class="block hover:underline">About Us</a>
+        <a href="#" class="block hover:underline">Contact</a>
+    </nav>
+</div>

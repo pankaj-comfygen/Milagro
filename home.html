@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .image-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circle-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid transparent;
+            position: relative;
+            z-index: 1;
+        }
+
+        .dot-left,
+        .dot-right {
+            width: 10px;
+            height: 10px;
+            background-color: #333;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 2;
+        }
+
+        .dot-left {
+            left: -5px;
+        }
+
+        .dot-right {
+            right: -5px;
+        }
+
+        .arabic-text {
+            position: absolute;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            z-index: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header"></div>
+    <section class="hero-section relative w-full h-screen bg-cover bg-center"
+        style="background-image: url('image/Untitled-1_0000_Layer-6.png');">
+        <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-40 flex items-center justify-center">
+            <!-- Add content inside this div if needed -->
+        </div>
+    </section>
+    <!-- <section class="flex items-center justify-center min-h-screen bg-gray-100">
+        <div class="relative flex items-center justify-center w-64 h-64 rounded-full bg-gray-200 overflow-hidden">
+            <Image
+                src="https://media.istockphoto.com/id/518468635/photo/french-pastries-on-display-a-confectionery-shop.jpg?s=612x612&w=0&k=20&c=av7rYRCLckvDp6s9sGmA_S9Lp_fTSDSSOtmR0wWJ8nY="
+                alt="Chocolates" width={300} height={300} class="object-cover w-full h-full" />
+
+            <div class="absolute left-0 top-1/2 w-4 h-4 bg-gray-600 rounded-full transform -translate-y-1/2"></div>
+
+            <div class="absolute right-0 top-1/2 w-4 h-4 bg-gray-600 rounded-full transform -translate-y-1/2"></div>
+        </div>
+    </section> -->
+
+    <div class="container">
+        <!-- Top Left Image -->
+        <div class="image-container">
+            <img src="https://media.istockphoto.com/id/518468635/photo/french-pastries-on-display-a-confectionery-shop.jpg?s=612x612&w=0&k=20&c=av7rYRCLckvDp6s9sGmA_S9Lp_fTSDSSOtmR0wWJ8nY="
+                alt="Chocolates" class="circle-image">
+            <div class="dot-left"></div>
+            <div class="dot-right"></div>
+        </div>
+
+        <!-- Top Right Image -->
+        <div class="image-container">
+            <img src="https://media.istockphoto.com/id/518468635/photo/french-pastries-on-display-a-confectionery-shop.jpg?s=612x612&w=0&k=20&c=av7rYRCLckvDp6s9sGmA_S9Lp_fTSDSSOtmR0wWJ8nY=y"
+                alt="Assorted items" class="circle-image">
+            <div class="dot-left"></div>
+            <div class="dot-right"></div>
+            <div class="arabic-text">تشكيلة<br>متفرو</div>
+        </div>
+
+        <!-- Bottom Left Image -->
+        <div class="image-container">
+            <img src="https://media.istockphoto.com/id/518468635/photo/french-pastries-on-display-a-confectionery-shop.jpg?s=612x612&w=0&k=20&c=av7rYRCLckvDp6s9sGmA_S9Lp_fTSDSSOtmR0wWJ8nY="
+                alt="Basket with items" class="circle-image">
+            <div class="dot-left"></div>
+            <div class="dot-right"></div>
+        </div>
+
+        <!-- Bottom Right Image -->
+        <div class="image-container">
+            <img src="https://media.istockphoto.com/id/518468635/photo/french-pastries-on-display-a-confectionery-shop.jpg?s=612x612&w=0&k=20&c=av7rYRCLckvDp6s9sGmA_S9Lp_fTSDSSOtmR0wWJ8nY="
+                alt="Food platter" class="circle-image">
+            <div class="dot-left"></div>
+            <div class="dot-right"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
