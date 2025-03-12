@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
     <title>Document</title>
 
     <style>
@@ -63,27 +65,141 @@
             text-align: center;
             z-index: 3;
         }
+
+
+
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main {
+            margin-right: -10%;
+            margin-left: -10%;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                margin-right: -10%;
+                margin-left: 10%;
+            }
+
+        }
     </style>
 </head>
 
 <body>
     <div id="header"></div>
-    <section class="hero-section relative w-full h-screen bg-cover bg-center"
-        style="background-image: url('image/Untitled-1_0000_Layer-6.png'); ">
+    <section class="hero-section relative w-full h-screen bg-cover bg-center p-0">
+        <img src="image/Untitled-1_0000_Layer-6.png" class="w-full h-screen object-cover md:block hidden"/>
+        <img src="image/Cover Photo.png" class="w-full h-screen object-center md:hidden block"/>
+
         <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-40 flex items-center justify-center">
         </div>
     </section>
-    <section class="grid grid-cols-2 gap-4 items-cnter max-w-4xl mx-auto  p-20 justify-center min-h-screen ">
-
-        <img src="image\Mask group (1).png" alt="Chocolates" class="object-cover md:w-full w-48 md:h-full h-46 " />
-        <img src="image\Mask group (2).png" alt="Chocolates" class="object-cover md:w-full w-48 h-46 md:h-full" />
-
-
-        <img src="image\Mask group (3).png" alt="Chocolates" class="object-cover md:w-full w-48 h-46 md:h-full" />
-        <img src="image\Mask group (4).png" alt="Chocolates" class="object-cover md:w-full  w-48 h-46 md:h-full" />
-
-
+    <section class="grid grid-cols-2 gap-4 items-cnter max-w-4xl mx-auto  p-20 justify-center  ">
+        <img src="image\Mask group (1).png" alt="Chocolates" class="object-cover  " />
+        <img src="image\Mask group (2).png" alt="Chocolates" class="object-cover " />
+        <img src="image\Mask group (3).png" alt="Chocolates" class="object-cover " />
+        <img src="image\Mask group (4).png" alt="Chocolates" class="object-cover " />
     </section>
+
+    <section class="swiper-slider">
+        <div style="overflow-x: hidden">
+            <main class="">
+                <div class="swiper mySwiper py-4">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="image/Untitled-1_0005_Layer-1.png"
+                                class="rounded-xl object-cover w-80 md:w-full h-40 md:h-[400px]" />
+                        </div>
+
+                        <div class="swiper-slide"><img src="image/Untitled-1_0004_Layer-2.png"
+                                class="rounded-xl object-cover w-80 md:w-full h-40 md:h-[400px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="image/Untitled-1_0005_Layer-1.png"
+                                class="rounded-xl object-cover w-80 md:w-full h-40 md:h-[400px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="image/Untitled-1_0004_Layer-2.png"
+                                class="rounded-xl object-cover w-80 md:w-full h-40 md:h-[400px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="image/Untitled-1_0005_Layer-1.png"
+                                class="rounded-xl object-cover w-80 md:w-full h-40 md:h-[400px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="image/Untitled-1_0004_Layer-2.png"
+                                class="rounded-xl object-cover  w-80 md:w-full h-40 md:h-[400px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="image/Untitled-1_0005_Layer-1.png"
+                                class="rounded-xl object-cover w-80 md:w-full h-40 md:h-[400px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="image/Untitled-1_0004_Layer-2.png"
+                                class="rounded-xl object-cover w-80 md:w-full h-40 md:h-[400px]" />
+                        </div>
+                    </div><!-- end swiper wrapper-->
+
+                    <!-- <div class=" prev-button absolute top-10 md:-top-40  left-20 bg-black z-50 ">Prev</div> -->
+                    <div class=" next-button absolute top-1/2 right-[15%]  z-[9999999]">
+                        <i class="fa-solid fa-angle-right text-[#AA8B7A]  text-2xl"></i>
+                    </div>
+
+
+                    <div class="absolute top-0 right-0   z-50">
+                        <div class="w-[500px] h-[100vh]"
+                            style="background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);">
+                        </div>
+
+                    </div>
+
+                </div>
+            </main>
+        </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 4,
+            slidesPerGroup: 1,
+            centeredSlides: false,
+            loop: true,
+            slideToClickedSlide: true,
+            spaceBetween: 10,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            // Navigation arrows
+            navigation: {
+                nextEl: '.next-button',
+                prevEl: '.prev-button',
+            },
+            breakpoints: {
+                0: { // For small screens (mobile)
+                    slidesPerView: 2,
+                },
+                768: { // For medium screens (tablets)
+                    slidesPerView: 3,
+                },
+                1024: { // For large screens (desktops)
+                    slidesPerView: 4,
+                }
+            }
+        });
+    </script>
 
 
     <script src="script.js"></script>
