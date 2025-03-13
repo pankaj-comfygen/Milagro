@@ -492,11 +492,11 @@
             <img src="image\Untitled-1_0003_Layer-3.png" class="w-full h-full" />
         </div>
     </div>
-    <div class=" bg-[#D9D9D9] mx-auto  ">
-        <div id="productGrid" class="grid grid-cols-2 md:grid-cols-3 space-y-8 items-end  container">
+    <div class=" bg-[#D9D9D9] mx-auto py-20 ">
+        <div id="productGrid" class="grid grid-cols-2 md:grid-cols-3  items-end  container ">
         </div>
         <!-- Order Now Button -->
-        <div class="mt-8 flex justify-center">
+        <div class="mt-8 flex justify-center ">
             <button
                 class="px-8 py-3 border-2 border-gray-500 rounded-full text-lg font-semibold text-gray-700 hover:bg-gray-100 transition">
                 Order now
@@ -589,15 +589,15 @@
         const productGrid = document.getElementById("productGrid");
 
         productGrid.innerHTML = products.map(product => `
-        <div class="  w-full rounded-none md:rounded-lg ">
-            <img src="${product.image}" alt="${product.title}"  class="w-full h-full object-cover rounded-[20px]">
-            <p class="text-sm text-end text-gray-800 font-semibold py-2">${product.title}</p>
-            <p class="text-[#7E7E7E] text-sm flex justify-between">
-                <span>${product.price}</span>
-                <span>${product.quantity}</span>
-            </p>
-        </div>
-    `).join('');
+    <div class="product-item w-full ">
+        <img src="${product.image}" alt="${product.title}" class="w-full h-full object-cover rounded-none md:rounded-[20px] ">
+        <p class="text-sm text-end text-gray-800 font-semibold py-2">${product.title}</p>
+        <p class="text-[#7E7E7E] text-sm flex justify-between">
+            <span>${product.price}</span>
+            <span>${product.quantity}</span>
+        </p>
+    </div>
+`).join('');
     </script>
 
     <script src="script.js"></script>

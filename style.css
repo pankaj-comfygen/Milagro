@@ -53,3 +53,16 @@ body {
     font-weight: 400;
     font-style: normal;
 }
+
+
+.product-item img {
+    border-radius: 0;
+    /* No rounded corners on mobile */
+}
+
+@media (min-width: 768px) {
+    .product-item img {
+        border-radius: 20px;
+
+    }
+}
