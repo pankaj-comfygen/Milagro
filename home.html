@@ -78,10 +78,10 @@
         .swiper-slide {
             text-align: center;
             font-size: 18px;
-            background: #fff;
+            background: #D9D9D9;
             display: flex;
             justify-content: center;
-            align-items: center;
+
         }
 
         main {
@@ -96,66 +96,356 @@
             }
 
         }
+
+        .triangle {
+            width: 10px;
+            height: 10px;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            background-image: url('image/1_0000_Layer-4 (1).png ');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .image-container {
+            background-image: url('image/1_0000_Layer-4 (1).png');
+            background-size: cover;
+            background-position: center;
+        }
     </style>
 </head>
 
 <body>
     <div id="header"></div>
     <section class="hero-section relative w-full h-screen bg-cover bg-center p-0">
-        <img src="image/Untitled-1_0000_Layer-6.png" class="w-full h-screen object-cover md:block hidden"/>
-        <img src="image/Cover Photo.png" class="w-full h-screen object-center md:hidden block"/>
+        <img src="image/Untitled-1_0000_Layer-6.png" class="w-full h-screen object-cover md:block hidden" />
+        <img src="image/Cover Photo.png" class="w-full h-screen object-center md:hidden block" />
 
         <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-40 flex items-center justify-center">
         </div>
     </section>
-    <section class="grid grid-cols-2 gap-4 items-cnter max-w-4xl mx-auto  p-20 justify-center  ">
-        <img src="image\Mask group (1).png" alt="Chocolates" class="object-cover  " />
-        <img src="image\Mask group (2).png" alt="Chocolates" class="object-cover " />
-        <img src="image\Mask group (3).png" alt="Chocolates" class="object-cover " />
-        <img src="image\Mask group (4).png" alt="Chocolates" class="object-cover " />
-    </section>
 
-    <section class="swiper-slider">
+    <div class="main div for image hover text bg-[#D9D9D9] py-10 md:block hidden">
+        <section class="flex justify-center items-center gap-10">
+            <section class="flex justify-center items-center p-2 relative">
+                <div>
+                    <img src="image\1_0000_Layer-4 (1).png " class="rounded-full w-6 h-6 py-1" />
+                </div>
+                <div class="-rotate-90">
+                    <div class="triangle"></div>
+                </div>
+                <!-- <img src="image\1_0000_Layer-4 (1).png " class="rounded-full w-64 h-64 py-2" /> -->
+                <div class="relative group w-64 h-64 overflow-hidden">
+                    <img src="image/1_0000_Layer-4 (1).png" class="rounded-full w-full h-full py-2 relative" />
+
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-20 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full overflow-hidden w-64 h-60 py-2 top-2 left-0">
+                        <span class="text-white text-lg font-bold">ميلقرو</span>
+                    </div>
+                </div>
+                <div class="asolute rotate-90">
+                    <div class="triangle"></div>
+                </div>
+                <div>
+                    <img src="image\1_0000_Layer-4 (1).png " class="rounded-full w-6 h-6 py-1 object-center" />
+                </div>
+            </section>
+
+            <section class="flex justify-center items-center p-2 relative">
+                <div>
+                    <img src="image/1_0000_Layer-4 (3).png" class="rounded-full w-6 h-6 py-1" />
+                </div>
+                <div class="-rotate-90">
+                    <div class="triangle"></div>
+                </div>
+                <!-- <img src="image/1_0000_Layer-4 (3).png " class="rounded-full w-64 h-64 py-2" /> -->
+                <div class="relative group w-64 h-64 overflow-hidden">
+                    <img src="image/1_0000_Layer-4 (3).png" class="rounded-full w-full h-full py-2 relative" />
+
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-20 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full overflow-hidden w-64 h-60 py-2 top-2 left-0">
+                        <span class="text-white text-lg font-bold">ميلقرو</span>
+                    </div>
+                </div>
+                <div class="asolute rotate-90">
+                    <div class="triangle"></div>
+                </div>
+                <div>
+                    <img src="image/1_0000_Layer-4 (3).png " class="rounded-full w-6 h-6 py-1 object-center" />
+                </div>
+            </section>
+
+
+        </section>
+        <section class="flex justify-center items-center gap-10">
+
+
+            <section class="flex justify-center items-center p-2 relative">
+                <div>
+                    <img src="image/1_0000_Layer-4 (4).png" class="rounded-full w-6 h-6 py-1" />
+                </div>
+                <div class="-rotate-90">
+                    <div class="triangle"></div>
+                </div>
+                <!-- <img src="image/1_0000_Layer-4 (4).png " class="rounded-full w-64 h-64 py-2" /> -->
+                <div class="relative group w-64 h-64 overflow-hidden">
+                    <img src="image/1_0000_Layer-4 (4).png" class="rounded-full w-full h-full py-2 relative" />
+
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-20 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full overflow-hidden w-64 h-60 py-2 top-2 left-0">
+                        <span class="text-white text-lg font-bold">ميلقرو</span>
+                    </div>
+                </div>
+                <div class="asolute rotate-90">
+                    <div class="triangle"></div>
+                </div>
+                <div>
+                    <img src="image/1_0000_Layer-4 (4).png " class="rounded-full w-6 h-6 py-1 object-center" />
+                </div>
+            </section>
+
+
+            <section class="flex justify-center items-center p-2 relative">
+                <div>
+                    <img src="image/1_0000_Layer-4 (5).png" class="rounded-full w-6 h-6 py-1" />
+                </div>
+                <div class="-rotate-90">
+                    <div class="triangle"></div>
+                </div>
+                <!-- <img src="image/1_0000_Layer-4 (5).png " class="rounded-full w-64 h-64 py-2" /> -->
+                <div class="relative group w-64 h-64 overflow-hidden">
+                    <img src="image/1_0000_Layer-4 (5).png " class="rounded-full w-full h-full py-2 relative" />
+
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-20 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full overflow-hidden w-64 h-60 py-2 top-2 left-0">
+                        <span class="text-white text-lg font-bold">ميلقرو</span>
+                    </div>
+                </div>
+                <div class="asolute rotate-90">
+                    <div class="triangle"></div>
+                </div>
+                <div>
+                    <img src="image/1_0000_Layer-4 (5).png " class="rounded-full w-6 h-6 py-1 object-center" />
+                </div>
+            </section>
+        </section>
+    </div>
+
+
+    <div class="main div for image hover text bg-[#D9D9D9] py-10 md:hidden block">
+        <section class="flex justify-center items-center gap-10">
+            <section class="flex justify-center items-center p-2 relative">
+                <div>
+                    <img src="image\1_0000_Layer-4 (1).png " class="rounded-full w-3 h-3" />
+                </div>
+                <div class="absolute left-[18px]">
+                    <div class="-rotate-90 ">
+                        <div class="triangle"></div>
+                    </div>
+                </div>
+
+                <!-- <img src="image\1_0000_Layer-4 (1).png " class="rounded-full w-64 h-64 py-2" /> -->
+                <div class="relative group w-32 h-32 overflow-hidden">
+                    <img src="image/1_0000_Layer-4 (1).png" class="rounded-full w-full h-full px-2 relative" />
+
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-20 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full overflow-hidden w-64 h-60 py-2 top-2 left-0">
+                        <span class="text-white text-lg font-bold">ميلقرو</span>
+                    </div>
+                </div>
+                <div class="absolute rotate-90 right-[18px]">
+                    <div class="triangle"></div>
+                </div>
+                <div>
+                    <img src="image\1_0000_Layer-4 (1).png " class="rounded-full w-3 h-3  object-center" />
+                </div>
+            </section>
+
+            <section class="flex justify-center items-center p-2 relative">
+                <div>
+                    <img src="image/1_0000_Layer-4 (2).png " class="rounded-full w-3 h-3" />
+                </div>
+                <div class="absolute left-[18px]">
+                    <div class="-rotate-90 ">
+                        <div class="triangle"></div>
+                    </div>
+                </div>
+
+                <!-- <img src="image\1_0000_Layer-4 (1).png " class="rounded-full w-64 h-64 py-2" /> -->
+                <div class="relative group w-32 h-32 overflow-hidden">
+                    <img src="image/1_0000_Layer-4 (2).png" class="rounded-full w-full h-full px-2 relative" />
+
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-20 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full overflow-hidden w-64 h-60 py-2 top-2 left-0">
+                        <span class="text-white text-lg font-bold">ميلقرو</span>
+                    </div>
+                </div>
+                <div class="absolute rotate-90 right-[18px]">
+                    <div class="triangle"></div>
+                </div>
+                <div>
+                    <img src="image/1_0000_Layer-4 (2).png " class="rounded-full w-3 h-3  object-center" />
+                </div>
+            </section>
+
+
+
+
+        </section>
+
+
+        <section class="flex justify-center items-center gap-10">
+            <section class="flex justify-center items-center p-2 relative">
+                <div>
+                    <img src="image/1_0000_Layer-4 (4).png " class="rounded-full w-3 h-3" />
+                </div>
+                <div class="absolute left-[18px]">
+                    <div class="-rotate-90 ">
+                        <div class="triangle"></div>
+                    </div>
+                </div>
+
+                <!-- <img src="image\1_0000_Layer-4 (1).png " class="rounded-full w-64 h-64 py-2" /> -->
+                <div class="relative group w-32 h-32 overflow-hidden">
+                    <img src="image/1_0000_Layer-4 (4).png" class="rounded-full w-full h-full px-2 relative" />
+
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-20 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full overflow-hidden w-64 h-60 py-2 top-2 left-0">
+                        <span class="text-white text-lg font-bold">ميلقرو</span>
+                    </div>
+                </div>
+                <div class="absolute rotate-90 right-[18px]">
+                    <div class="triangle"></div>
+                </div>
+                <div>
+                    <img src="image/1_0000_Layer-4 (4).png" class="rounded-full w-3 h-3  object-center" />
+                </div>
+            </section>
+
+            <section class="flex justify-center items-center p-2 relative">
+                <div>
+                    <img src="image/1_0000_Layer-4 (5).png " class="rounded-full w-3 h-3" />
+                </div>
+                <div class="absolute left-[18px]">
+                    <div class="-rotate-90 ">
+                        <div class="triangle"></div>
+                    </div>
+                </div>
+
+                <!-- <img src="image\1_0000_Layer-4 (1).png " class="rounded-full w-64 h-64 py-2" /> -->
+                <div class="relative group w-32 h-32 overflow-hidden">
+                    <img src="image/1_0000_Layer-4 (5).png" class="rounded-full w-full h-full px-2 relative" />
+
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-20 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full overflow-hidden w-64 h-60 py-2 top-2 left-0">
+                        <span class="text-white text-lg font-bold">ميلقرو</span>
+                    </div>
+                </div>
+                <div class="absolute rotate-90 right-[18px]">
+                    <div class="triangle"></div>
+                </div>
+                <div>
+                    <img src="image/1_0000_Layer-4 (5).png " class="rounded-full w-3 h-3  object-center" />
+                </div>
+            </section>
+
+
+
+
+        </section>
+
+    </div>
+
+
+
+    <section class="swiper-slider py-20 bg-[#D9D9D9]">
         <div style="overflow-x: hidden">
+            <h2 class="text-center font-bold text-2xl py-10">الأفضل مبيعاً</h2>
             <main class="">
                 <div class="swiper mySwiper py-4">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+                        <div class="swiper-slide flex flex-col    ">
                             <img src="image/Untitled-1_0005_Layer-1.png"
-                                class="rounded-xl object-cover w-80 md:w-full h-40 md:h-[400px]" />
+                                class=" rounded-none md:rounded-xl object-cover w-80 md:w-full h-40 md:h-[400px]" />
+                            <div class="py-1 ">
+                                <p class="text-[#000000] text-start text-xs ">Milagro Distributions | Blue</p>
+                                <p class="text-[#7E7E7E] text-end text-xs w-full ">29.000 KD</p>
+
+                            </div>
                         </div>
 
-                        <div class="swiper-slide"><img src="image/Untitled-1_0004_Layer-2.png"
-                                class="rounded-xl object-cover w-80 md:w-full h-40 md:h-[400px]" />
+                        <div class="swiper-slide flex flex-col ">
+                            <img src="image/Untitled-1_0004_Layer-2.png"
+                                class=" rounded-none md:rounded-xl object-cover w-80 md:w-full h-40 md:h-[400px]" />
+                            <div class="py-1 ">
+                                <p class="text-[#000000] text-start text-xs ">Milagro Distributions | Blue</p>
+                                <p class="text-[#7E7E7E] text-end text-xs w-full ">29.000 KD</p>
+
+                            </div>
                         </div>
-                        <div class="swiper-slide"><img src="image/Untitled-1_0005_Layer-1.png"
-                                class="rounded-xl object-cover w-80 md:w-full h-40 md:h-[400px]" />
+                        <div class="swiper-slide flex flex-col ">
+                            <img src="image/Untitled-1_0005_Layer-1.png"
+                                class=" rounded-none md:rounded-xl object-cover w-80 md:w-full h-40 md:h-[400px]" />
+                            <div class="py-1 ">
+                                <p class="text-[#000000] text-start text-xs ">Milagro Distributions | Blue</p>
+                                <p class="text-[#7E7E7E] text-end text-xs w-full ">29.000 KD</p>
+
+                            </div>
                         </div>
-                        <div class="swiper-slide"><img src="image/Untitled-1_0004_Layer-2.png"
-                                class="rounded-xl object-cover w-80 md:w-full h-40 md:h-[400px]" />
+                        <div class="swiper-slide flex flex-col ">
+                            <img src="image/Untitled-1_0004_Layer-2.png"
+                                class=" rounded-none md:rounded-xl object-cover w-80 md:w-full h-40 md:h-[400px]" />
+                            <div class="py-1 ">
+                                <p class="text-[#000000] text-start text-xs ">Milagro Distributions | Blue</p>
+                                <p class="text-[#7E7E7E] text-end text-xs w-full ">29.000 KD</p>
+
+                            </div>
                         </div>
-                        <div class="swiper-slide"><img src="image/Untitled-1_0005_Layer-1.png"
-                                class="rounded-xl object-cover w-80 md:w-full h-40 md:h-[400px]" />
+                        <div class="swiper-slide flex flex-col ">
+                            <img src="image/Untitled-1_0005_Layer-1.png"
+                                class=" rounded-none md:rounded-xl object-cover w-80 md:w-full h-40 md:h-[400px]" />
+                            <div class="py-1 ">
+                                <p class="text-[#000000] text-start text-xs ">Milagro Distributions | Blue</p>
+                                <p class="text-[#7E7E7E] text-end text-xs w-full ">29.000 KD</p>
+
+                            </div>
                         </div>
-                        <div class="swiper-slide"><img src="image/Untitled-1_0004_Layer-2.png"
-                                class="rounded-xl object-cover  w-80 md:w-full h-40 md:h-[400px]" />
+                        <div class="swiper-slide flex flex-col ">
+                            <img src="image/Untitled-1_0004_Layer-2.png"
+                                class=" rounded-none md:rounded-xl object-cover  w-80 md:w-full h-40 md:h-[400px]" />
+                            <div class="py-1 ">
+                                <p class="text-[#000000] text-start text-xs ">Milagro Distributions | Blue</p>
+                                <p class="text-[#7E7E7E] text-end text-xs w-full ">29.000 KD</p>
+
+                            </div>
                         </div>
-                        <div class="swiper-slide"><img src="image/Untitled-1_0005_Layer-1.png"
-                                class="rounded-xl object-cover w-80 md:w-full h-40 md:h-[400px]" />
+                        <div class="swiper-slide flex flex-col ">
+                            <img src="image/Untitled-1_0005_Layer-1.png"
+                                class=" rounded-none md:rounded-xl object-cover w-80 md:w-full h-40 md:h-[400px]" />
+                            <div class="py-1 ">
+                                <p class="text-[#000000] text-start text-xs ">Milagro Distributions | Blue</p>
+                                <p class="text-[#7E7E7E] text-end text-xs w-full ">29.000 KD</p>
+
+                            </div>
                         </div>
-                        <div class="swiper-slide"><img src="image/Untitled-1_0004_Layer-2.png"
-                                class="rounded-xl object-cover w-80 md:w-full h-40 md:h-[400px]" />
+                        <div class="swiper-slide flex flex-col ">
+                            <img src="image/Untitled-1_0004_Layer-2.png"
+                                class=" rounded-none md:rounded-xl object-cover w-80 md:w-full h-40 md:h-[400px]" />
+                            <div class="py-1 ">
+                                <p class="text-[#000000] text-start text-xs ">Milagro Distributions | Blue</p>
+                                <p class="text-[#7E7E7E] text-end text-xs w-full ">29.000 KD</p>
+
+                            </div>
                         </div>
                     </div><!-- end swiper wrapper-->
 
                     <!-- <div class=" prev-button absolute top-10 md:-top-40  left-20 bg-black z-50 ">Prev</div> -->
-                    <div class=" next-button absolute top-1/2 right-[15%]  z-[9999999]">
+                    <div class=" next-button absolute top-[35%] md:top-[45%] right-[15%]  z-[9999999]">
                         <i class="fa-solid fa-angle-right text-[#AA8B7A]  text-2xl"></i>
                     </div>
 
 
-                    <div class="absolute top-0 right-0   z-50">
-                        <div class="w-[500px] h-[100vh]"
+                    <div class="absolute top-4 right-0   z-50">
+                        <div class="w-[250px] md:w-[500px] h-[24.9vh] md:h-[54.9vh]"
                             style="background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);">
                         </div>
 
