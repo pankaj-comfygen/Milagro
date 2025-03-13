@@ -1,7 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Actor&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Actor&display=swap');
+
+
+
 body {
     font-family: 'Inter', sans-serif;
     line-height: 100%;
     letter-spacing: 0%;
 
 
+}
+
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url('./fonts/AirbnbCereal_W_Bk.otf') format('opentype');
+    /* Adjust path if needed */
+
+}
+
+@font-face {
+    font-family: 'helvetica';
+    src: url('./fonts/helvetica-compressed-5871d14b6903a.otf') format('opentype');
+    /* Adjust path if needed */
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+.handcrafted {
+    font-family: 'CustomFont', sans-serif;
+}
+
+.helvetica {
+    font-family: "helvetica";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 0%;
+    letter-spacing: 0%;
+    background: #000000;
+}
+
+.actor-regular {
+    font-family: "Actor", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.abril-fatface-regular {
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+    font-style: normal;
 }
