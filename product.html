@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" src="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="header"></div>
+
+
+    <div class="bg-[#D9D9D9] sfpro  pb-10">
+        <div class="max-w-8xl mx-auto md:p-4 p-0">
+            <div class=" overflow-hidden">
+                <div class="flex flex-col md:flex-row gap-5 flex-col-reverse ">
+
+                    <div class="w-full md:w-1/2 p-6 ">
+
+                        <div class="border-b border-[#212A1E4D]/30 pb-2">
+                            <h1 class="text-xl font-bold pb-2 flex justify-between place-itmes-center"><span>Truffles
+                                    with cocoa fingers</span><span
+                                    class="md:hidden block text-[#7E7E7E] font-normal text-lg">50
+                                    pieces</span></h1>
+                            <div class="flex items-center space-x-20 text-[#7E7E7E]">
+                                <span>44,000 KD</span>
+                                <span class="md:block hidden">50 pieces</span>
+                            </div>
+                        </div>
+
+
+                        <div class="mt-4 border-b border-[#212A1E4D]/30 pb-4">
+                            <div class="flex justify-between items-center">
+                                <h2 class="text-lg font-semibold">Description</h2>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <p class="text-sm text-[#000000] mt-2">Clear acrylic tray, each piece contains two pieces of
+                                chocolate / you can add writing</p>
+                        </div>
+
+                        <div class="mt-10 space-y-4   pb-5">
+                            <div class="flex items-center justify-between border rounded-[10px] p-3 bg-[#F5F5F5]">
+                                <div class="flex items-center ]">
+                                    <input type="checkbox" class="h-4 w-4 text-blue-600 border-[#7E7E7E]  ">
+                                    <label class="ml-2 text-[#7E7E7E] font-bold">Add logo</label>
+                                </div>
+                                <span class="text-[#7E7E7E] font-bold">3,000 dinars</span>
+                            </div>
+
+                            <div class="flex items-center justify-between border rounded-[10px] p-3  bg-[#F5F5F5]">
+                                <div class="flex items-center">
+                                    <input type="checkbox" class="h-4 w-4 text-blue-600 border-gray-300 rounded">
+                                    <label class="ml-2 text-[#7E7E7E] font-bold">Gift Card</label>
+                                </div>
+                                <span class="text-[#7E7E7E] font-bold">3,000 dinars</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-10 flex items-center space-x-2">
+                            <button class="bg-[#212A1E] text-white px-4 py-3 rounded-md flex-grow text-sm font-medium">
+                                add to cart
+                                <span class="ml-2">44 DK</span>
+                            </button>
+
+                            <div class="flex items-center border border-[#AA8B7A] rounded-md text-[#000000]">
+                                <button class="px-4 py-2  text-xl">
+                                    −
+                                </button>
+                                <span class="px-4 py-2 ">1</span>
+                                <button class="px-4 py-2  text-xl">
+                                    +
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Side - Product Image -->
+                    <div class="w-full md:w-1/2 flex justify-center  ">
+                        <div class="h-full md:block hidden ">
+                            <img src="image\Untitled-1_0000_Layer-6 (2).png"
+                                alt="Gold bowl with chocolate truffles and cocoa fingers"
+                                class="w-[100%] h-[60vh] object-cover rounded-2xl">
+                        </div>
+                    </div>
+                    <div class="w-full  md:hidden block ">
+                        <div class="h-full ">
+                            <img src="image\Untitled-1_0000_Layer-6 (2).png"
+                                alt="Gold bowl with chocolate truffles and cocoa fingers"
+                                class="w-[100%] h-[60vh] object-fit ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        // Get the product ID from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+
+        // Sample products array (same as in index.html)
+        const products = [
+            { id: 1, image: "image/Untitled-1_0001_Layer-5.png", title: "الماكرون مكس", price: "29.000 KD", quantity: "50 حبة" },
+            { id: 2, image: "image/Untitled-1_0000_Layer-6.png", title: "الماكرون مكس", price: "29.000 KD", quantity: "50 حبة" },
+            { id: 3, image: "image/Untitled-1_0002_Layer-4.png", title: "الماكرون مكس", price: "29.000 KD", quantity: "50 حبة" },
+            { id: 4, image: "image/Untitled-1_0001_Layer-5.png", title: "الماكرون مكس", price: "29.000 KD", quantity: "50 حبة" },
+            { id: 5, image: "image/Untitled-1_0002_Layer-4.png", title: "الماكرون مكس", price: "29.000 KD", quantity: "50 حبة" },
+            { id: 6, image: "image/Untitled-1_0000_Layer-6.png", title: "الماكرون مكس", price: "29.000 KD", quantity: "50 حبة" },
+        ];
+
+        // Find the selected product
+        const product = products.find(p => p.id == productId);
+
+        if (product) {
+            document.getElementById("productDetails").innerHTML = `
+                <img src="${product.image}" alt="${product.title}" class="w-full max-w-md mx-auto">
+                <h2 class="text-xl font-bold mt-4">${product.title}</h2>
+                <p class="text-lg text-gray-700">${product.price}</p>
+                <p class="text-sm text-gray-600">${product.quantity}</p>
+            `;
+        } else {
+            document.getElementById("productDetails").innerHTML = `<p class="text-red-500">Product not found</p>`;
+        }
+    </script>
+    <div id="footer"></div>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

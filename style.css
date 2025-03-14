@@ -28,6 +28,18 @@ body {
 }
 
 
+@font-face {
+    font-family: 'MyCustomFont';
+    src:
+        url('fonts/SFPRODISPLAYREGULAR.OTF') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sfpro {
+    font-family: "MyCustomFont";
+}
+
 
 .handcrafted {
     font-family: 'CustomFont', sans-serif;

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" src="style.css">
+
+</head>
+
+<body>
+    <div id="header"></div>
+    <section class="hero-section">
+        <div class="image-container relative">
+            <img src="image\1_0000_Layer-4 (1).png" class="w-full h-auto md:h-screen object-fill" />
+            <div
+                class="overlay absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 hover:opacity-100">
+                <p class="text-white text-4xl font-bold sfpro">Milagro Categories</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+
+        <div class=" bg-[#FFFFFF] mx-auto p-6 ">
+            <div id="productGrid" class="grid grid-cols-2 md:grid-cols-3 gap-12 container p-5 mx-auto items-end">
+            </div>
+
+            <!-- Order Now Button -->
+            <div class="mt-8 flex justify-center ">
+                <button
+                    class="px-8 py-3 border-2 sfpro border-[#AA8B7A] rounded-md text-lg font-semibold text-[#000000] hover:bg-gray-100 transition">
+
+                    Show more +
+
+                </button>
+            </div>
+        </div>
+    </section>
+    <div id="footer"></div>
+    <script src="script.js"></script>
+
+    <script>
+        const products = [
+            {
+                id: 1,
+                image: "image/Untitled-1_0001_Layer-5.png",
+                title: "الماكرون مكس",
+                price: "29.000 KD",
+                quantity: "50 حبة"
+            },
+            {
+                id: 2,
+                image: "image/Untitled-1_0000_Layer-6.png",
+                title: "الماكرون مكس",
+                price: "29.000 KD",
+                quantity: "50 حبة"
+            },
+            {
+                id: 3,
+                image: "image/Untitled-1_0002_Layer-4.png",
+                title: "الماكرون مكس",
+                price: "29.000 KD",
+                quantity: "50 حبة"
+            },
+            {
+                id: 4,
+                image: "image/Untitled-1_0001_Layer-5.png",
+                title: "الماكرون مكس",
+                price: "29.000 KD",
+                quantity: "50 حبة"
+            },
+            {
+                id: 5,
+                image: "image/Untitled-1_0002_Layer-4.png",
+                title: "الماكرون مكس",
+                price: "29.000 KD",
+                quantity: "50 حبة"
+            },
+            {
+                id: 6,
+                image: "image/Untitled-1_0000_Layer-6.png",
+                title: "الماكرون مكس",
+                price: "29.000 KD",
+                quantity: "50 حبة"
+            },
+        ];
+
+        const productGrid = document.getElementById("productGrid");
+
+        productGrid.innerHTML = products.map(product => `
+    <div class="product-item w-full ">
+        <img src="${product.image}" alt="${product.title}" class="w-full h-full object-cover rounded-none md:rounded-[20px] "
+        onclick="redirectToProduct(${product.id})"">
+        <p class="text-sm text-end text-gray-800 font-semibold py-2">${product.title}</p>
+        <p class="text-[#7E7E7E] text-sm flex justify-between">
+            <span>${product.price}</span>
+            <span>${product.quantity}</span>
+        </p>
+    </div>
+`).join('');
+        function redirectToProduct(id) {
+            window.location.href = `product.html?id=${id}`;
+        }
+    </script>
+
+</body>
+
+</html>
