@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" src="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    <style>
+        #map {
+            height: 300px;
+            width: 100%;
+        }
+
+        .pin-icon {
+            filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header"></div>
+    <section class="sfpro bg-[#FFFFFF]">
+        <div class="max-w-6xl mx-auto p-0 md:p-6 bg-white sfpro">
+            <div class="mb-6 ">
+                <h1 class="text-lg font-medium mb-4 text-start md:text-center md:px-0 px-6 pt-3 md:pt-0">Address and
+                    delivery
+                </h1>
+
+                <div class="grid grid-cols-2 items-center space-x-10 mt-10">
+                    <div class="">
+                        <div class="flex justify-between items-center mb-2 w-full ">
+                            <div class="flex items-center font-bold">
+                                <span class=" mr-2">Address</span>
+                                <span class="">></span>
+                                <span class=" ml-2">Home</span>
+                            </div>
+                            <button
+                                class="text-[#007AFF] hover:text-blue-700 border-b border-[#212A1E] pb-2 text-start w-14">Edit</button>
+                        </div>
+
+                        <div class="mb-4 flex justify-between">
+                            <p class="text-[#000000] max-w-xs">
+                                Cooperative Society Pharmacy, Imam Hussein Bin Ali Street, Dasma and Bneid Al Qar,
+                                Kuwait 13021.
+                            </p>
+                            <button class="text-[#FF2D55] hover:text-red-700">Change</button>
+                        </div>
+
+                        <div class=" border-gray-200 pt-4 mb-4">
+                            <div class="font-bold mb-2">Delivery</div>
+                            <div class="flex justify-between items-center">
+                                <p class="text-gray-800">Delivery will be within 43 minutes</p>
+                                <button class="text-[#FF2D55] hover:text-red-700">Change</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div id="map" class=""></div>
+                    </div>
+
+                </div>
+
+
+
+                <div class="md:block hidden w-full ">
+
+
+                    <div class=" py-4 grid grid-cols-2 items-center space-x-10 pt-10 ">
+                        <div class="flex justify-start gap-6 ">
+                            <span class="font-semibold text-2xl">Total</span>
+                            <span class="text-2xl ml-2 font-bold flex justify-between items-center gap-2">72,000
+                                <span class="text-sm text-black">dinar</span>
+
+                            </span>
+                        </div>
+
+                        <div class="flex  ">
+                            <button
+                                class="bg-white w-full border border-[#000000] text-black px-10 py-2 rounded-lg mr-2 font-semibold">Pay</button>
+                            <button
+                                class="bg-gray-800  w-full text-white px-10 font-semibold py-2 rounded-lg">Next</button>
+                        </div>
+                    </div>
+
+
+                    <div class=" flex justify-around pt-7 ">
+                        <img src="image\bq1Ixp.png" class="w-20 h-16" />
+                        <img src="image\Layer_1.png" class="w-20 h-17" />
+
+                    </div>
+                    <div class=" flex justify-around">
+                        <div class="text-center ps-3">
+                            <p class="mt-2 font-bold">Delivery fees</p>
+                            <p class="font-bold">1 Dinar</p>
+                        </div>
+
+                        <div class="text-center">
+                            <p class="mt-2  font-bold">quality assurance</p>
+                            <p class="text-xs underline">Refund Policy</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+    <div id="footer"></div>
+
+    <script src="script.js"></script>
+
+    <script>
+
+        const map = L.map('map', {
+            zoomControl: false,
+            attributionControl: false,
+            dragging: false,
+            touchZoom: false,
+            doubleClickZoom: false,
+            scrollWheelZoom: false,
+            boxZoom: false,
+            tap: false
+        }).setView([29.3759, 47.9774], 15);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19
+        }).addTo(map);
+
+
+        const pinIcon = L.divIcon({
+            className: 'pin-icon',
+            html: '<i class="fa-solid fa-map-pin text-4xl"></i>',
+            iconSize: [24, 36],
+            iconAnchor: [12, 36]
+        });
+
+        const marker = L.marker([29.3759, 47.9774], { icon: pinIcon }).addTo(map);
+
+        function addPin(lat, lng) {
+
+            if (marker) {
+                map.removeLayer(marker);
+            }
+
+            L.marker([lat, lng], { icon: pinIcon }).addTo(map);
+
+
+            map.setView([lat, lng], 15);
+        }
+
+
+        map.on('click', function (e) {
+            addPin(e.latlng.lat, e.latlng.lng);
+        });
+    </script>
+</body>
+
+</html>

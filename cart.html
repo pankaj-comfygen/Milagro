@@ -11,11 +11,28 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        .dropdown {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .dropdown.active {
+            max-height: 600px;
+            transition: max-height 0.5s ease-in;
+        }
+    </style>
 </head>
 
 <body>
     <div id="header"></div>
-    <section>
+    <section class="md:block hidden">
         <div class="max-w-6xl mx-auto p-0 md:p-6 bg-white sfpro">
             <div class="mb-6 ">
                 <h1 class="text-lg font-medium mb-4 text-start md:text-center md:px-0 px-6 pt-3 md:pt-0">You have 3
@@ -73,11 +90,7 @@
                         </button>
                     </div>
                 </div>
-
-
-
-
-                <div class="   px-6  py-4 flex items-center">
+                <div class="   md:px-0 px-6  py-4 flex items-center">
                     <label class="inline-flex items-center">
                         <div class="relative inline-block w-10 mr-2 align-middle">
                             <input type="checkbox" id="toggle" class="sr-only" />
@@ -91,7 +104,7 @@
                 </div>
 
 
-                <div class="md:block hidden">
+                <div class="md:block hidden ">
 
 
                     <div class=" py-4 flex justify-between items-center ">
@@ -111,7 +124,7 @@
                     </div>
 
 
-                    <div class=" flex justify-around pt-2 ">
+                    <div class=" flex justify-around pt-7 ">
                         <img src="image\bq1Ixp.png" class="w-20 h-16" />
                         <img src="image\Layer_1.png" class="w-20 h-17" />
 
@@ -139,9 +152,250 @@
             }
         </style>
     </section>
+
+
+    <!--------mobile seaction only-->
+
+
+    <section class="md:hidden block">
+        <div class="flex justify-center ">
+
+            <div class="  w-full max-w-md">
+
+                <div class=" rounded">
+                    <button id="cartBtn" class="flex items-center justify-between w-full p-3 bg-white hover:bg-gray-50">
+                        <span class="font-medium">You have 3 products in your cart.</span>
+                        <i id="cartIcon" class="fas fa-chevron-right text-gray-400"></i>
+                    </button>
+                    <div id="cartDropdown" class="dropdown border-t">
+                        <div class="">
+                            <div class=" border-[#212A1E] py-4 flex items-start justify-between md:px-0 px-6">
+                                <div class="flex w-full ">
+                                    <div class="mr-4">
+                                        <img src="image\1_0000_Layer-4 (1).png" alt="Large box"
+                                            class="md:w-28 md:h-28 w-20 h-20 md:rounded-lg object-cover border border-gray-200">
+                                    </div>
+                                    <div class=" md:w-auto w-full">
+                                        <h3 class="font-medium text-[#000000] text-md md:text-2xl">Large box -
+                                            assortment</h3>
+                                        <p class="text-[#7E7E7E]   pt-3">50 pieces</p>
+                                        <div class="flex justify-between items-end gap-10  ">
+                                            <div class="mt-8 inline-flex border border-gray-800">
+                                                <button class="px-3 py-1 bg-gray-800 text-white">+</button>
+                                                <span class="px-4 py-1 bg-white">2</span>
+                                                <button class="px-3 py-1 bg-gray-800 text-white">−</button>
+                                            </div>
+                                            <span class="md:mr-6 mr-0 text-[#7E7E7E]">38,000 dinars</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center ">
+                                    <button class="text-gray-400">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="border-t border-[#212A1E] py-4 flex items-start justify-between md:mx-0 mx-6">
+                                <div class="flex w-full ">
+                                    <div class="mr-4">
+                                        <img src="image\1_0000_Layer-4 (1).png" alt="Large box"
+                                            class="md:w-28 md:h-28 w-20 h-20 md:rounded-lg object-cover border border-gray-200">
+                                    </div>
+                                    <div class=" md:w-auto w-full">
+                                        <h3 class="font-medium text-[#000000] text-md md:text-2xl">Large box -
+                                            assortment</h3>
+                                        <p class="text-[#7E7E7E]   pt-3">50 pieces</p>
+                                        <div class="flex justify-between items-end gap-10  ">
+                                            <div class="mt-8 inline-flex border border-gray-800">
+                                                <button class="px-3 py-1 bg-gray-800 text-white">+</button>
+                                                <span class="px-4 py-1 bg-white">2</span>
+                                                <button class="px-3 py-1 bg-gray-800 text-white">−</button>
+                                            </div>
+                                            <span class="md:mr-6 mr-0 text-[#7E7E7E]">38,000 dinars</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center ">
+                                    <button class="text-gray-400">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="   md:px-0 px-6  py-4 flex items-center">
+                                <label class="inline-flex items-center">
+                                    <div class="relative inline-block w-10 mr-2 align-middle">
+                                        <input type="checkbox" id="toggle" class="sr-only" />
+                                        <div class="w-8 h-5 border-2 border-black rounded-full shadow-inner"></div>
+                                        <div
+                                            class="dot absolute w-4 h-4 bg-black rounded-full shadow -left-[1px] top-0.5 transition">
+                                        </div>
+                                    </div>
+                                    <span class="text-[#000000] font-bold">Set as a gift</span>
+                                </label>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <!---address and delevery-->
+                <div class=" rounded">
+                    <button id="addressBtn"
+                        class="flex items-center justify-between w-full p-3 bg-white hover:bg-gray-50">
+                        <span class="font-medium">Address and delivery</span>
+                        <i id="addressIcon" class="fas fa-chevron-right text-gray-400"></i>
+                    </button>
+                    <div id="addressDropdown" class="dropdown border-t">
+                        <!-- Map -->
+                        <div class="p-4">
+                            <div class="relative w-full h-32 bg-gray-200 rounded-lg overflow-hidden">
+                                <img src="/api/placeholder/320/128" alt="Map" class="w-full h-full object-cover">
+                                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                    <div class="w-6 h-6 bg-black rounded-full flex items-center justify-center">
+                                        <div class="w-2 h-2 bg-white rounded-full"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Address Details -->
+                        <div class="px-4 py-2">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <p class="text-sm text-gray-500">Address > Home</p>
+                                    <p class="font-medium">Cooperative Society Pharmacy, Imam</p>
+                                    <p class="text-sm">Hussein Bin Ali Street, Dasma and Bneid Al</p>
+                                    <p class="text-sm">Qar, Kuwait 13021.</p>
+                                </div>
+                                <div class="flex flex-col space-y-2">
+                                    <button class="text-pink-500 text-sm">Edit</button>
+                                    <button class="text-pink-500 text-sm">Change</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Delivery Time -->
+                        <div class="px-4 py-2 border-t">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <p class="font-medium">Delivery</p>
+                                    <p class="text-sm">Delivery will be within 43 minutes</p>
+                                </div>
+                                <button class="text-pink-500 text-sm">Change</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Dropdown -->
+                <div class=" rounded">
+                    <button id="paymentBtn"
+                        class="flex items-center justify-between w-full p-3 bg-white hover:bg-gray-50">
+                        <span class="font-medium">Payment</span>
+                        <i id="paymentIcon" class="fas fa-chevron-right text-gray-400"></i>
+                    </button>
+                    <div id="paymentDropdown" class="dropdown border-t">
+                        <div class="p-4">
+                            <h3 class="font-medium mb-3">Payment</h3>
+
+                            <div class="space-y-4">
+                                <!-- ePay -->
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center space-x-3">
+                                        <input type="radio" name="payment" id="epay" class="w-4 h-4 text-blue-600">
+                                        <div class="w-8 h-8 bg-gray-200 rounded flex items-center justify-center">
+                                            <span class="text-xs font-bold">eP</span>
+                                        </div>
+                                        <span class="text-sm">Payment by</span>
+                                    </div>
+                                    <span class="font-medium">Apple Pay</span>
+                                </div>
+
+                                <!-- K-Net -->
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center space-x-3">
+                                        <input type="radio" name="payment" id="knet" class="w-4 h-4 text-blue-600"
+                                            checked>
+                                        <div
+                                            class="w-8 h-8 bg-blue-500 rounded flex items-center justify-center text-white">
+                                            <span class="text-xs font-bold">K</span>
+                                        </div>
+                                        <span class="text-sm">Payment by</span>
+                                    </div>
+                                    <span class="font-medium">K-Net</span>
+                                </div>
+
+                                <!-- Credit Card -->
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center space-x-3">
+                                        <input type="radio" name="payment" id="card" class="w-4 h-4 text-blue-600">
+                                        <div class="w-8 h-8 bg-gray-200 rounded flex items-center justify-center">
+                                            <i class="fab fa-cc-visa text-blue-700"></i>
+                                        </div>
+                                        <span class="text-sm">Payment by</span>
+                                    </div>
+                                    <span class="font-medium">Credit Card</span>
+                                </div>
+
+                                <!-- Cash -->
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center space-x-3">
+                                        <input type="radio" name="payment" id="cash" class="w-4 h-4 text-blue-600">
+                                        <div
+                                            class="w-8 h-8 bg-green-500 rounded flex items-center justify-center text-white">
+                                            <i class="fas fa-money-bill-wave"></i>
+                                        </div>
+                                        <span class="text-sm">Cash on delivery</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+
     <div id="footer"></div>
 
     <script src="script.js"></script>
+
+
+    <script>
+        function setupDropdown(buttonId, dropdownId, iconId) {
+            const button = document.getElementById(buttonId);
+            const dropdown = document.getElementById(dropdownId);
+            const icon = document.getElementById(iconId);
+
+            if (!button || !dropdown || !icon) return;
+
+            button.addEventListener('click', function () {
+                dropdown.classList.toggle('active');
+
+                // Change icon direction
+                if (dropdown.classList.contains('active')) {
+                    icon.classList.remove('fa-chevron-right');
+                    icon.classList.add('fa-chevron-down');
+                } else {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-right');
+                }
+            });
+        }
+
+        setupDropdown('addressBtn', 'addressDropdown', 'addressIcon');
+        setupDropdown('paymentBtn', 'paymentDropdown', 'paymentIcon');
+        setupDropdown('offersBtn', 'offersDropdown', 'offersIcon');
+        setupDropdown('commentsBtn', 'commentsDropdown', 'commentsIcon');
+        setupDropdown('cartBtn', 'cartDropdown', 'cartIcon');
+
+    </script>
 
 </body>
 
