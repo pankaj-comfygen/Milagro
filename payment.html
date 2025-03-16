@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" src="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="header"></div>
+    <main class="max-w-6xl mx-auto p-0 md:p-6 bg-white sfpro  ">
+        <div class="mb-6 ">
+            <h1 class="text-lg font-bold mb-4 text-start md:text-center md:px-0 px-6 pt-3 md:pt-0">Payment
+            </h1>
+
+            <div class="bg-white  p-6 w-full max-w-4xl mx-auto grid grid-cols-2 items-start space-x-10">
+                <div>
+                    <div class="space-y-1 mb-6">
+
+                        <div class="flex items-center justify-between bg-[#D9D9D980]/50  p-3 ">
+                            <div class="flex items-center space-x-3">
+                                <input type="radio" id="apple-pay" name="payment" checked
+                                    class="h-4 w-4 text-green-500 focus:ring-green-500">
+                                <div class="flex items-center space-x-2">
+                                    <i class="fa-brands fa-apple-pay text-2xl"></i>
+                                    <label for="apple-pay" class="text-sm font-medium">Payment by</label>
+                                </div>
+                            </div>
+                            <span class="text-sm font-bold">Apple Pay</span>
+                        </div>
+
+                        <div class="flex items-center justify-between p-3 rounded ">
+                            <div class="flex items-center space-x-3">
+                                <input type="radio" id="knet" name="payment"
+                                    class="h-4 w-4 text-green-500 focus:ring-green-500">
+                                <div class="flex items-center space-x-2">
+                                    <div
+                                        class="w-8 h-8 bg-blue-500 rounded flex items-center justify-center text-white">
+                                        <img src="image\image 3.png" />
+                                    </div>
+                                    <label for="knet" class="text-sm font-medium">Payment by</label>
+                                </div>
+                            </div>
+                            <span class="text-sm font-bold">K-Net</span>
+                        </div>
+
+                        <div class="flex items-center justify-between p-3 rounded">
+                            <div class="flex items-center space-x-3">
+                                <input type="radio" id="credit-card" name="payment"
+                                    class="h-4 w-4 text-green-500 focus:ring-green-500">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-8 h-8 bg-gray-200 rounded flex items-center justify-center">
+                                        <img src="image\image 4.png" />
+                                    </div>
+                                    <label for="credit-card" class="text-sm font-medium">Payment by</label>
+                                </div>
+                            </div>
+                            <span class="text-sm font-bold">Credit Card</span>
+                        </div>
+
+
+                        <div class="flex items-center justify-between p-3 rounded ">
+                            <div class="flex items-center space-x-3">
+                                <input type="radio" id="cash" name="payment"
+                                    class="h-4 w-4 text-green-500 focus:ring-green-500">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-8 h-8  rounded flex items-center justify-center text-white">
+                                        <img src="image\image 5.png" />
+                                    </div>
+                                    <label for="cash" class="text-sm font-bold">Cash on delivery</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-sm font-bold mb-2">Offers</h3>
+                        <div class="bg-[#F9F2F1] p-3 ">
+                            <input type="text" placeholder="Enter your coupon"
+                                class="w-full border-0 bg-[#F9F2F1] text-sm focus:ring-0 focus:outline-none placeholder-[#000000]">
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class=" font-bold mb-2">Comments</h3>
+                        <div class="bg-[#F9F2F1] p-3 ">
+                            <textarea placeholder="Comment" rows="3"
+                                class="w-full border-0 bg-[#F9F2F1] text-sm focus:ring-0 focus:outline-none placeholder-[#000000] resize-none"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class=" mb-4">
+                    <div>
+                        <span class="text-xl font-medium">Total</span>
+                        <span class="text-xl font-bold ml-6">72,000</span>
+                        <span class="text-sm font-semibold">dinar</span>
+                    </div>
+                    <button
+                        class="bg-white mt-4 ms-8 border border-black text-black font-medium py-1.5 px-10 rounded-lg hover:bg-gray-100 transition-colors">
+                        <a href="thanku.html">Pay</a>
+                    </button>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+        <div class="flex justify-around items-center mb-6 px-8 ">
+
+            <div class="flex flex-col items-center">
+                <div class="mb-2">
+                    <img src="image\bq1Ixp.png" class="w-20 h-16" />
+                </div>
+                <p class="text-sm font-medium">Delivery fees</p>
+                <p class="font-semibold">1 Dinar</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div class="mb-2 relative">
+                    <img src="image\Layer_1.png" class="w-18 h-16" />
+
+                </div>
+                <p class="text-sm font-medium">quality assurance</p>
+                <a href="#" class="text-sm text-gray-500 underline">Refund Policy</a>
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </main>
+    <div id="footer"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
