@@ -56,7 +56,7 @@
                     your
                     cart
                 </h1>
-                <div class="border-t border-[#212A1E] py-4 flex items-start justify-between md:px-0 px-6">
+                <div class=" border-[#212A1E] py-4 flex items-start justify-between md:px-0 px-6">
                     <div class="flex w-full ">
                         <div class="mr-4">
                             <img src="image\1_0000_Layer-4 (1).png" alt="Large box"
@@ -253,7 +253,6 @@
                     </div>
                 </div>
 
-                <!---address and delevery-->
                 <div class=" rounded">
                     <button id="addressBtn" class="flex items-center justify-between w-full  bg-white   px-6 py-3 ">
                         <span class="font-bold text-[#000000]">Address and delivery</span>
@@ -303,7 +302,6 @@
                     </div>
                 </div>
 
-                <!-- Payment Dropdown -->
                 <div class=" rounded">
                     <button id="paymentBtn" class="flex items-center justify-between w-full bg-white px-6 py-3">
                         <span class="font-bold text-[#000000]">Payment</span>
@@ -455,14 +453,16 @@
                     </div>
 
                     <!-- Payment buttons -->
-                    <div class="flex gap-3 px-5">
-                        <button class="flex-1 border border-[#AA8B7A] rounded-lg py-4 flex justify-center items-center">
+                    <div class="flex justify-between items-end gap-3 px-5">
+                        <button
+                            class="flex-1 border border-[#AA8B7A] rounded-lg py-3 flex justify-center items-center block">
                             <i class="fa-brands fa-apple"></i>
                             <span class="ml-2 font-medium">Pay</span>
                         </button>
-                        <button class="flex-1 bg-gray-800 text-white rounded-lg py-4 font-medium">
-                            Next
-                        </button>
+                        <!-- <button class="flex-1 bg-gray-800 text-white rounded-lg py-4 font-medium"> -->
+                        <a href="thanku.html"
+                            class="bg-[#212A1E] flex-1 w-full text-white mt-20 font-semibold rounded-md hover:bg-gray-700 transition duration-300 block text-center p-3">Next</a>
+                        <!-- </button> -->
                     </div>
                 </div>
 
@@ -489,7 +489,6 @@
             button.addEventListener('click', function () {
                 dropdown.classList.toggle('active');
 
-                // Change icon direction
                 if (dropdown.classList.contains('active')) {
                     icon.classList.remove('fa-chevron-right');
                     icon.classList.add('fa-chevron-down');
@@ -505,6 +504,21 @@
         setupDropdown('offersBtn', 'offersDropdown', 'offersIcon');
         setupDropdown('commentsBtn', 'commentsDropdown', 'commentsIcon');
         setupDropdown('cartBtn', 'cartDropdown', 'cartIcon');
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const cartDropdown = document.getElementById('cartDropdown');
+            const cartIcon = document.getElementById('cartIcon');
+
+            if (cartDropdown && cartIcon) {
+                // Open the cart dropdown by default
+                cartDropdown.classList.add('active');
+
+                // Change the icon to down arrow
+                cartIcon.classList.remove('fa-chevron-right');
+                cartIcon.classList.add('fa-chevron-down');
+            }
+        });
 
     </script>
 
