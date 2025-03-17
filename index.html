@@ -117,7 +117,7 @@
     </style>
 </head>
 
-<body>
+<body dir="">
     <div id="header"></div>
     <section class="hero-section relative w-full h-auto bg-cover bg-center p-0">
         <img src="image\Cover Photo.png" class="w-full h-screen object-center md:block hidden" />
@@ -468,7 +468,8 @@
                     Every bite is crafted with passion and precision, bringing you an
                     unparalleled taste experience. From rich chocolate to delicate fillings,
                     discover the magic of gourmet indulgence.</p>
-                <a href="#" class="text-[#8B6932] handcrafted text-[15px] font-semibold">Explore Our Collection</a>
+                <a href="category.html" class="text-[#8B6932] handcrafted text-[15px] font-semibold">Explore Our
+                    Collection</a>
                 <button class="border border-[#0000004D]/30 rounded-md px-8 py-2 handcrafted">
                     Shop Now
                 </button>
@@ -594,12 +595,14 @@
 
         productGrid.innerHTML = products.map(product => `
     <div class="product-item w-full ">
-        <img src="${product.image}" alt="${product.title}" class="w-full h-full object-cover rounded-none md:rounded-[20px] ">
+        <a href="product.html">
+              <img src="${product.image}" alt="${product.title}" class="w-full h-full object-cover rounded-none md:rounded-[20px] ">
         <p class="text-sm text-end text-gray-800 font-semibold py-2">${product.title}</p>
         <p class="text-[#7E7E7E] text-sm flex justify-between">
             <span>${product.price}</span>
             <span>${product.quantity}</span>
         </p>
+    </a>
     </div>
 `).join('');
     </script>
